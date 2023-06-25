@@ -21,8 +21,8 @@ print "Hello World!\n";
 
 # variable must start with a letter or _ and then numbers can be added there after
 # scalars can contain strings or numbers
-my $name = 'Tharinda'; # default value of variable = undefined
-my ($age, $street) = (24, 'Galle'); # assign multiple values for scalar
+my $name = 'Tharinda'; # default value of variable = undef
+my ($age, $street, $abc) = (24, 'Galle'); # assign multiple values for scalar
 
 # string interpolation and concatenation
 my $my_info = "$name ($age) lives on \"$street\".\n";
@@ -32,6 +32,12 @@ print $my_info, "\n";
 # avoid escaping quotes with q{} for single quotes and qq{} for double quotes
 $my_info = qq{$name ($age) lives on "$street".\n};
 printf($my_info);
+
+say $abc; # error - use of uninitialized value $abc in say ...
+
+my ($_first, $_second) = 1;
+say $_first; # 1
+say $_second; # error - use of uninitialized value $second in say ...
 
 # define a long string over multiple lines
 my $info = <<"END";
@@ -83,7 +89,7 @@ say "HEX 10 = ", hex 10; # convert hexadecimal 10 to decimal
 say "OCT 10 = ", oct 10; # convert octal 10 to decimal
 say "INT 6.45 = ", int(6.45); # truncate decimal places
 say "LOG 2.7 = ", log 2.7; # ln(2.7)
-say "Random between 0 - 10 = ", int(rand 11); # random number between 0 and 10
+say "Random 0 - 10 = ", int(rand 11); # random number between 0 and 10
 say "SQRT 9 = ", sqrt 9; # square root of 9
 
 # assignment operators [+=, -=, *=, /=]
@@ -106,3 +112,230 @@ say --$rand_num;
 # order of operations
 say "3 + 2 * 5 = ", 3 + 2 * 5;
 say "(3 + 2) * 5 = ", (3 + 2) * 5;
+
+# if, else if, else statements
+# 0, 0.0, "0", undef, "" are considered to be false
+# comparison operators [==, !=, <, <=, >, >=]
+# boolean operators [!, &&, ||]
+
+my ($var1, $var2, $var3, $var4, $var5, $var6, $var7) = (0, 0.0, "", '', " ", "0", undef);
+say $var1;
+say $var2;
+say $var3;
+say $var4;
+say $var5;
+say $var6;
+say $var7; # error - use of uninitialized value $var6 in say ...
+
+if ($var1) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var2) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var3) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var4) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var5) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var6) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ($var7) {
+    say "1";
+} else {
+    say "2";
+}
+
+say(); # error - use of uninitialized value $_ in say ...
+
+if (defined $var1) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var2) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var3) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var4) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var5) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var6) {
+    say "1";
+} else {
+    say "2";
+}
+
+if (defined $var7) {
+    say "1";
+} else {
+    say "2";
+}
+
+say ("");
+
+if ("" eq "0") {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - argument "" isn't numeric in numeric eq (==) at ...
+if ("" == "0") {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - argument "" isn't numeric in numeric eq (==) at ...
+if ("" == 0) {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - argument "" isn't numeric in numeric eq (==) at ...
+if ("" == 0.0) {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - argument "" isn't numeric in numeric eq (==) at ...
+if ("" == '') {
+    say "1";
+} else {
+    say "2";
+}
+
+if ("" eq '') {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - use of uninitialized value in numeric eq (==) at ...
+# error - argument "" isn't numeric in numeric eq (==) at ...
+if ("" == undef) {
+    say "1";
+} else {
+    say "2";
+}
+
+# error - use of uninitialized value in numeric eq (==) at ...
+if ("" eq undef) {
+    say "1";
+} else {
+    say "2";
+}
+
+if ("" eq 0) {
+    say "1";
+} else {
+    say "2";
+}
+
+say ("---");
+
+$age = 90;
+my $is_not_intoxicated = 1;
+my $age_last_exam = 16;
+
+if ($age < 16) {
+    say "you can't drive";
+} elsif (!defined $is_not_intoxicated) {
+    say "you can't drive";
+} else {
+    say "you can drive";
+}
+
+if (($age >= 1) && ($age < 16)) {
+    say "you can't Drive";
+} elsif (!defined $is_not_intoxicated) {
+    say "you can't drive";
+} elsif (($age >= 80) && (($age > 100) || (($age - $age_last_exam) > 5))) {
+    say "you can't drive";
+} else {
+    say "you can drive";
+}
+
+# comparison operators for strings [eq, ne, lt, le, gt, ge]
+
+if ('abc' eq 'abc') {
+    say "abc == abc";
+} else {
+    say "abc != abc";
+}
+
+if ('abc' ne 'xyz') {
+    say "abc != xyz";
+} else {
+    say "abc == xyz";
+}
+
+if ('a' lt 'z') {
+    say "a < z";
+} else {
+    say "a >= z";
+}
+
+if ('a' ge 'z') {
+    say "a >= z";
+} else {
+    say "a < z";
+}
+
+if ('a' ge 'a') {
+    say "a >= a";
+} else {
+    say "a < a";
+}
+
+# unless is the opposite of if
+unless (!defined $is_not_intoxicated) {
+    say "get sober";
+}
+
+# ternary operator returns different values depending on a condition
+say(($age > 18) ? "can vote" : "can't vote");
