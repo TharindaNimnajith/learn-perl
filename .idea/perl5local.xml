@@ -66,6 +66,8 @@
         <entry key="C:/Strawberry/perl/lib/auto/threads/shared/shared.xs.dll" value="1611480906000" />
         <entry key="C:/Strawberry/perl/lib/auto/threads/threads.xs.dll" value="1611480904000" />
         <entry key="C:/Strawberry/perl/lib/auto/version/vxs/vxs.xs.dll" value="1611482426000" />
+        <entry key="C:/Strawberry/perl/site/lib/auto/Hash/StoredIterator/StoredIterator.xs.dll" value="1687692156000" />
+        <entry key="C:/Strawberry/perl/site/lib/auto/List/SomeUtils/XS/XS.xs.dll" value="1687691265000" />
         <entry key="C:/Strawberry/perl/vendor/lib/auto/B/COW/COW.xs.dll" value="1611485322000" />
         <entry key="C:/Strawberry/perl/vendor/lib/auto/B/Hooks/OP/Check/Check.xs.dll" value="1611487410000" />
         <entry key="C:/Strawberry/perl/vendor/lib/auto/B/Utils/Utils.xs.dll" value="1611487628000" />

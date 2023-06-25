@@ -3913,6 +3913,11 @@ sub utf8_mode;
 sub xml_mode;
 sub xml_pic;
 }
+package Hash::StoredIterator {
+sub hash_get_iterator;
+sub hash_init_iterator;
+sub hash_set_iterator;
+}
 package Hash::Util {
 sub _clear_placeholders(\%) ;
 sub all_keys(\%\@\@) ;
