@@ -4829,6 +4829,60 @@ sub DESTROY;
 package List::MoreUtils::XS_sa {
 sub DESTROY;
 }
+package List::SomeUtils::PP {
+sub max(@) ;
+}
+package List::SomeUtils::XS {
+sub _array_iterator(;$) ;
+sub _natatime_iterator() ;
+sub after(&@) ;
+sub after_incl(&@) ;
+sub all(&@) ;
+sub all_u(&@) ;
+sub any(&@) ;
+sub any_u(&@) ;
+sub apply(&@) ;
+sub before(&@) ;
+sub before_incl(&@) ;
+sub bsearch(&@) ;
+sub bsearchidx(&@) ;
+sub each_array(\@;\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@) ;
+sub each_arrayref;
+sub false(&@) ;
+sub firstidx(&@) ;
+sub firstres(&@) ;
+sub firstval(&@) ;
+sub indexes(&@) ;
+sub insert_after(&$\@) ;
+sub insert_after_string($$\@) ;
+sub lastidx(&@) ;
+sub lastres(&@) ;
+sub lastval(&@) ;
+sub mesh(\@\@;\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@\@) ;
+sub minmax(@) ;
+sub mode(@) ;
+sub natatime($@) ;
+sub none(&@) ;
+sub none_u(&@) ;
+sub notall(&@) ;
+sub notall_u(&@) ;
+sub one(&@) ;
+sub one_u(&@) ;
+sub onlyidx(&@) ;
+sub onlyres(&@) ;
+sub onlyval(&@) ;
+sub pairwise(&\@\@) ;
+sub part(&@) ;
+sub singleton(@) ;
+sub true(&@) ;
+sub uniq(@) ;
+}
+package List::SomeUtils_ea {
+sub DESTROY;
+}
+package List::SomeUtils_na {
+sub DESTROY;
+}
 package List::Util {
 sub all(&@) ;
 sub any(&@) ;

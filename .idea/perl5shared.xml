@@ -10,7 +10,6 @@
       </PerlVersion>
     </option>
     <option name="ALLOW_INJECTIONS_WITH_INTERPOLATION" value="true" />
-    <option name="PERL_CRITIC_ENABLED" value="true" />
     <option name="PERL_SWITCH_ENABLED" value="true" />
   </component>
 </project>
