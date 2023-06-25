@@ -25,13 +25,10 @@ my $name = 'Tharinda'; # default value of variable = undefined
 my ($age, $street) = (24, 'Galle'); # assign multiple values for scalar
 
 # string interpolation and concatenation
-
 my $my_info = "$name ($age) lives on \"$street\".\n";
 printf $my_info;
-
 $my_info = '$name ($age) lives on "$street".\n';
 print $my_info, "\n";
-
 # avoid escaping quotes with q{} for single quotes and qq{} for double quotes
 $my_info = qq{$name ($age) lives on "$street".\n};
 printf($my_info);
@@ -71,3 +68,41 @@ my $second = 2;
 say "$first $second";
 ($first, $second) = ($second, $first);
 say "$first $second";
+
+# basic math operations
+say "5 + 4 = ", 5 + 4;
+say "5 - 4 = ", 5 - 4;
+say "5 * 4 = ", 5 * 4;
+say "5 / 4 = ", 5 / 4;
+say "5 % 4 = ", 5 % 4;
+say "5 ** 4 = ", 5 ** 4;
+
+# built in math functions
+say "EXP 1 = ", exp 1; # e to the power of 1
+say "HEX 10 = ", hex 10; # convert hexadecimal 10 to decimal
+say "OCT 10 = ", oct 10; # convert octal 10 to decimal
+say "INT 6.45 = ", int(6.45); # truncate decimal places
+say "LOG 2.7 = ", log 2.7; # ln(2.7)
+say "Random between 0 - 10 = ", int(rand 11); # random number between 0 and 10
+say "SQRT 9 = ", sqrt 9; # square root of 9
+
+# assignment operators [+=, -=, *=, /=]
+my $rand_num = 5;
+$rand_num += 2;
+say $rand_num;
+$rand_num -= 2;
+say $rand_num;
+$rand_num *= 2;
+say $rand_num;
+$rand_num /= 2;
+say $rand_num;
+
+# increment and decrement
+say $rand_num++;
+say ++$rand_num;
+say $rand_num--;
+say --$rand_num;
+
+# order of operations
+say "3 + 2 * 5 = ", 3 + 2 * 5;
+say "(3 + 2) * 5 = ", (3 + 2) * 5;
