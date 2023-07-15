@@ -339,3 +339,76 @@ unless (!defined $is_not_intoxicated) {
 
 # ternary operator returns different values depending on a condition
 say(($age > 18) ? "can vote" : "can't vote");
+
+# for loop
+for (my $i = 0; $i < 10; $i++) {
+    say $i;
+}
+
+# while loop
+my $i = 1;
+
+while ($i < 10) {
+    if ($i % 2 == 0) {
+        $i++;
+        next; # continue
+    }
+
+    if ($i == 7) {
+        last; # break
+    }
+
+    say $i;
+
+    $i++;
+}
+
+# do while loop
+my $lucky_num = 7;
+my $guess;
+
+do {
+    say "Guess a Number Between 1 and 10:";
+    $guess = <STDIN>; # user input
+} while $guess != $lucky_num;
+
+say "You guessed $lucky_num";
+
+# given when (switch) statement
+my $age_old = 18;
+
+given ($age_old) {
+    when ($_ > 16) {
+        say "1";
+        continue; # continue with next cases
+    }
+    when (17) {
+        say "2";
+        continue;
+    }
+    when (18) {
+        say "3";
+        continue;
+    }
+    when ("18") {
+        say "4";
+        continue;
+    }
+    when ($_ = "18") {
+        say "5";
+        continue;
+    }
+    when ($_ = 18) {
+        say "6";
+        continue;
+    }
+    when ($_ > 17) {
+        say "7";
+    }
+    when ($_ > 17) {
+        say "8";
+    }
+    default {
+        say "9";
+    }
+}
