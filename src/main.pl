@@ -412,3 +412,47 @@ given ($age_old) {
         say "9";
     }
 }
+
+# strings
+
+my $long_string = "Random long string";
+say "Length of string = ", length $long_string;
+
+# index returns the location of a String
+printf("Long is at %d \n", index $long_string, "long");
+
+# rindex returns the last occurrence
+printf("Last g is at %d \n", rindex $long_string, "g");
+
+# . concatenates multiple strings
+$long_string = $long_string . ' isn\'t that' . ' long';
+say $long_string;
+
+# substr
+my $s = "The black cat climbed the green tree";
+say substr $s, 4, 5; # black
+say substr $s, 4, -11; # black cat climbed the
+say substr $s, 14; # climbed the green tree
+say substr $s, -4; # tree
+say substr $s, -4, 2; # tr
+
+my $animal = "animals";
+
+# chop deletes and returns the last character
+printf("Last character is %s \n", chop $animal);
+printf("Second last character is %s \n", chop $animal);
+say $animal;
+
+# chomp deletes the last newline
+my $no_newline = "No newline\n";
+say $no_newline;
+chomp $no_newline;
+say $no_newline;
+
+# uppercase and lowercase functions
+
+printf("Uppercase : %s \n", uc $long_string);
+printf("Lowercase : %s \n", lc $long_string);
+
+$long_string = "random long string";
+printf("Uppercase first : %s \n", ucfirst $long_string); # title case
