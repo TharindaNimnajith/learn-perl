@@ -415,16 +415,17 @@ given ($age_old) {
 
 # strings
 
+# length of a string
 my $long_string = "Random long string";
 say "Length of string = ", length $long_string;
 
-# index returns the location of a String
+# index returns the location of a string
 printf("Long is at %d \n", index $long_string, "long");
 
 # rindex returns the last occurrence
 printf("Last g is at %d \n", rindex $long_string, "g");
 
-# . concatenates multiple strings
+# concatenating multiple strings
 $long_string = $long_string . ' isn\'t that' . ' long';
 say $long_string;
 
@@ -436,9 +437,8 @@ say substr $s, 14; # climbed the green tree
 say substr $s, -4; # tree
 say substr $s, -4, 2; # tr
 
-my $animal = "animals";
-
 # chop deletes and returns the last character
+my $animal = "animals";
 printf("Last character is %s \n", chop $animal);
 printf("Second last character is %s \n", chop $animal);
 say $animal;
@@ -450,9 +450,9 @@ chomp $no_newline;
 say $no_newline;
 
 # uppercase and lowercase functions
-
 printf("Uppercase : %s \n", uc $long_string);
 printf("Lowercase : %s \n", lc $long_string);
 
+# title case
 $long_string = "random long string";
-printf("Uppercase first : %s \n", ucfirst $long_string); # title case
+printf("Uppercase first : %s \n", ucfirst $long_string);
